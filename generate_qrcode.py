@@ -13,17 +13,17 @@ qr = qrcode.QRCode(
                 border=4,
                 )
 
-                # adding data to the QR code
-                qr.add_data(url)
-                qr.make(fit=True)
+# adding data to the QR code
+qr.add_data(url)
+qr.make(fit=True)
 
-                # creating an image from the QR Code instance
-                img = qr.make_image(fill_color="black", back_color="white")
+# creating an image from the QR Code instance
+img = qr.make_image(fill_color="black", back_color="white")
 
-                # saving the image to a file
-                filename = input("Enter filename to save (e.g., qrcode.png): ")
-                img.save(filename)
-                print(f"QR code saved as {filename}")
+# saving the image to a file
+filename = input("Enter filename to save (e.g., qrcode.png): ")
+img.save(filename)
+print(f"QR code saved as {filename}")
 
-                # optionally display the image
-                img.show()
+# optionally display the image
+img.show()
